@@ -230,90 +230,24 @@
                  <div class="separate"></div>
              </div>
              <div class="row clearfix">
-             <?php foreach ($store as $str) : ?>
-
-                <?php endforeach; ?>
-                 <!-- News Block -->
+             <?php foreach ($store as $str) { ?>
+                    <!-- News Block -->
                  <div class="news-block col-lg-4 col-md-6 col-sm-12">
                      <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-                         <!-- <div class="image">
-                             <img src="images/resource/news-1.jpg" alt="" /> -->
-                             <!-- Overlay Box -->
-                             <!-- <div class="overlay-box">
-                                 <div class="overlay-inner">
-                                     <div class="content">
-                                         <a href="images/resource/news-1.jpg" data-fancybox="news" data-caption="" class="icon flaticon-gallery"></a>
-                                     </div>
-                                 </div>
-                             </div>
-                         </div> -->
                          <div class="lower-content">
-                             <h6><a href="#"><?php echo $str['nama_store']; ?></a></h6>
+                         <div class="category">Denpasar</div>
+                             <h6><a href="#"><?php echo $str->nama_store; ?></a></h6>
                              <ul class="post-info">
-                                 <li>Alamat : <?php echo $str['lokasi_store']; ?></li>
-                                 <li>No.Telp : <?php echo $str['nomor_telepon_restoran']; ?></li>
+                                 <li>Alamat : <?php echo $str->lokasi_store; ?></li>
+                                 <li>No.Telp : <?php echo $str->nomor_telepon_restoran; ?></li>
                              </ul>
                              <br>
-                             <div class="products"><?php echo $str['kuota']; ?> kuota</div>
+                             <div class="products"><?php echo $str->kuota; ?> kuota</div>
                          </div>
                      </div>
                  </div>
-                 
                   
-
-                 <!-- News Block -->
-                 <!-- <div class="news-block col-lg-4 col-md-6 col-sm-12">
-                     <div class="inner-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms"> -->
-                         <!-- <div class="image">
-                             <img src="images/resource/news-2.jpg" alt="" /> -->
-                             <!-- Overlay Box -->
-                             <!-- <div class="overlay-box">
-                                 <div class="overlay-inner">
-                                     <div class="content">
-                                         <a href="images/resource/news-2.jpg" data-fancybox="news" data-caption="" class="icon flaticon-gallery"></a>
-                                     </div>
-                                 </div>
-                             </div>
-                         </div> -->
-                         <!-- <div class="lower-content">
-                             <div class="category">Denpasar Timur</div>
-                             <h6><a href="#">Mangsi Tropical | Mix Your Own Salad</a></h6>
-                             <ul class="post-info">
-                                 <li>Alamat : Jl. Raya Puputan No. 178, Sumerta Keload, Kec. Denpasar Timur Kota Denpasar, Bali 80239</li>
-                                 <li>No.Telp : (0361) 4744297</li>
-                             </ul>
-                             <br>
-                             <div class="products">100 Kuota tersedia</div>
-                         </div>
-                     </div>
-                 </div> -->
-                 
-                 <!-- News Block -->
-                 <!-- <div class="news-block col-lg-4 col-md-6 col-sm-12">
-                     <div class="inner-box wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms"> -->
-                         <!-- <div class="image">
-                             <img src="images/resource/news-3.jpg" alt="" /> -->
-                             <!-- Overlay Box -->
-                             <!-- <div class="overlay-box">
-                                 <div class="overlay-inner">
-                                     <div class="content">
-                                         <a href="images/resource/news-3.jpg" data-fancybox="news" data-caption="" class="icon flaticon-gallery"></a>
-                                     </div>
-                                 </div>
-                             </div>
-                         </div> -->
-                         <!-- <div class="lower-content">
-                             <div class="category">Denpasar Barat</div>
-                             <h6><a href="#">Mangsi Teuku Umar Barat | Mix Your Own Grill</a></h6>
-                             <ul class="post-info">
-                                 <li>Alamat : Jl. Teuku Umar Barat No.84, Pemecutan Klod, Kec. Denpasar Barat, Kota Denpasar, Bali 80119</li>
-                                 <li>No.Telp : 0813-3828-6979</li>
-                             </ul>
-                             <br>
-                             <div class="products">100 Kuota tersedia</div>
-                         </div>
-                     </div>
-                 </div> -->
+             <?php } ?>
                  
              </div>
          </div>

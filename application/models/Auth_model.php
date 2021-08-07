@@ -5,7 +5,8 @@ class Auth_model extends CI_Model{
 
     public function outlet()
     {
-        return $this->db->get('store')->result_array();
+        $query = $this->db->get('store');
+        return $query->result();
     }
     
 }
