@@ -8,5 +8,11 @@ class Auth_model extends CI_Model{
         $query = $this->db->get('store');
         return $query->result();
     }
+
+    public function menu_makanan()
+    {
+        $query = $this->db->get('menu');
+        return $query->result();
+    }
     
 }

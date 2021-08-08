@@ -71,14 +71,7 @@
 										</li>
 									</ul>
 								</li>
-								<li class="dropdown"><a href="#">Menu</a>
-									<ul>
-										<li><a href="menu.html">Main Course</a></li>
-										<li><a href="milkshake.html">Side Dish</a></li>
-										<li><a href="frappe.html">Juice</a></li>
-										<li><a href="boba-tea.html">Coffee & Tea</a></li>
-									</ul>
-								</li>
+								<<li><a href="<?php echo base_url(); ?>Menu">Menu</a></li>
 								<li><a href="<?php echo base_url(); ?>Reservasi">Reservasi</a></li>
 								<li><a href="<?php echo base_url(); ?>Pelanggan">Profile</a></li>
 								<li class="dropdown"><a href="#">Blog</a>
