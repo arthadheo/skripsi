@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Menu extends CI_Controller {
+class Reservasi extends CI_Controller {
 
 	public function __construct()
     {
@@ -13,11 +13,11 @@ class Menu extends CI_Controller {
 
 	public function index()
 	{
-        $s['title'] = 'Menu Mangsi';
+		$a['title'] = 'Reservasi Mangsi';
 		$data['menu'] = $this->Auth_model->menu_makanan();
 
-		$this->load->view('template/header', $s);
-		$this->load->view('MenuSite', $data);
+		$this->load->view('template/header', $a);
+		$this->load->view('ReservasiSite-Menu', $data);
         $this->load->view('template/footer');
 	}
 }

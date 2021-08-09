@@ -55,30 +55,10 @@
 						
 						<div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
 							<ul class="navigation clearfix">
-								<li class="dropdown"><a href="<?php echo base_url(); ?>WelcomeSite">Home</a>
-									<ul>
-										<li><a href="index.html">Homepage One</a></li>
-										<li><a href="index-2.html">Homepage Two</a></li>
-										<li><a href="index-3.html">Homepage Three</a></li>
-										<li><a href="index-4.html">Homepage Four</a></li>
-										<li class="dropdown"><a href="#">Header Styles</a>
-											<ul>
-												<li><a href="index.html">Header Style One</a></li>
-												<li><a href="index-2.html">Header Style Two</a></li>
-												<li><a href="index-3.html">Header Style Three</a></li>
-												<li><a href="index-3.html">Header Style Four</a></li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-								<<li><a href="<?php echo base_url(); ?>Menu">Menu</a></li>
+								<li><a href="<?php echo base_url(); ?>WelcomeSite">Home</a></li>
+								<li><a href="<?php echo base_url(); ?>Menu">Menu</a></li>
 								<li><a href="<?php echo base_url(); ?>Reservasi">Reservasi</a></li>
 								<li><a href="<?php echo base_url(); ?>Pelanggan">Profile</a></li>
-								<li class="dropdown"><a href="#">Blog</a>
-									<ul>
-										<li><a href="not-found.html">Not Found</a></li>
-									</ul>
-								</li>
 								<li><a href="<?php echo base_url(); ?>auth/registrasi">Register</a></li>
 							</ul>
 						</div>

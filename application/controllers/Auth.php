@@ -24,16 +24,20 @@ class Auth extends CI_Controller {
 	}
 
     private function _proseslogin(){
+        session_start();
         $email = $this->input->post('email_pelanggan');
         $password = $this->input->post('katasandi_pelanggan');
 
         $pelanggan = $this->db->get_where('pelanggan', ['email_pelanggan' => $email])->row_array();
         if($pelanggan) {
             if(password_verify($password, $pelanggan['katasandi_pelanggan'])) {
-                $data = [
-                    'email' => $pelanggan['email_pelanggan']
-                ];
-                $this->session->set_userdata($pelanggan);
+                $_SESSION['nama_pelanggan'] = $pelanggan['nama_pelanggan'];
+                $_SESSION['email_pelanggan'] = $pelanggan['email_pelanggan'];
+                $_SESSION['nomor_telepon_pelanggan'] = $pelanggan['nomor_telepon_pelanggan'];
+                $_SESSION['point_pelanggan'] = $pelanggan['point_pelanggan'];
+                $_SESSION['image'] = $pelanggan['image'];
+                
+
                 redirect('pelanggan');
             }else{
                 $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
@@ -58,7 +62,7 @@ class Auth extends CI_Controller {
             'min_length' => 'Password terlalu pendek!'
         ]);
         $this->form_validation->set_rules('katasandi_pelanggan2', 'Password', 'required|trim|matches[katasandi_pelanggan]');
-        $this->form_validation->set_rules('nomor_telepon_pelanggan', 'Mobile Number', 'required|trim|regex_match[/^[0-9]{10}$/]|is_unique[pelanggan.nomor_telepon_pelanggan]');
+        $this->form_validation->set_rules('nomor_telepon_pelanggan', 'Mobile Number', 'required|trim|is_unique[pelanggan.nomor_telepon_pelanggan]');
          
         if($this->form_validation->run() == false) {
             $data['title'] = 'Registrasi Mangsi';
@@ -87,7 +91,11 @@ class Auth extends CI_Controller {
 
     public function logout()
     {
+        $this->session->unset_userdata('nama_pelanggan');
         $this->session->unset_userdata('email_pelanggan');
+        $this->session->unset_userdata('nomor_telepon_pelanggan');
+        $this->session->unset_userdata('point_pelanggan');
+        $this->session->unset_userdata('image');
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
         Akun telah logout</div>');
         redirect('auth/login');

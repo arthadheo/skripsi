@@ -114,9 +114,9 @@
 				<!-- Form Column -->
 				<div class="form-column col-lg-12 col-md-12 col-sm-12">
 					<div class="inner-column">
-						<div class="title-box">
-							<h4>Isi form dibawah untuk memenuhi kebutuhan reservasi</h4>
-						</div>
+					<div class="sec-title">
+                             <h4 class="title">Isi Form Reservasi</h4>
+                         </div>
 						
 						<!-- Contact Form -->
 						<div class="contact-form">
@@ -124,7 +124,7 @@
 								<div class="row clearfix">
 								
 									<div class="form-group col-lg-6 col-md-6 col-sm-12">
-										<input type="text" name="username" placeholder="Nama Lengkap" required>
+										<input type="text" name="username" placeholder="Nama Lengkap" required><?php echo $_SESSION['nama_pelanggan']; ?>
 									</div>
 									
 									<div class="form-group col-lg-6 col-md-6 col-sm-12">
@@ -136,7 +136,7 @@
 									</div> -->
 
 									<div class="form-group col-lg-6 col-md-6 col-sm-12">
-										<input type="text" name="Telpon" placeholder="No Telpon" required>
+										<input type="text" name="Telpon" placeholder="No Telpon" required><?php echo $_SESSION['nomor_telepon_pelanggan']; ?>
 									</div>
 									
 									<div class="form-group col-lg-6 col-md-6 col-sm-12">
@@ -144,7 +144,7 @@
 									</div>
 
 									<div class="form-group col-lg-6 col-md-6 col-sm-12">
-										<input type="email" name="email" placeholder="Email" required>
+										<input type="email" name="email" placeholder="Email" required><?php echo $_SESSION['email_pelanggan']; ?>
 									</div>
 									
 									<div class="form-group col-lg-6 col-md-6 col-sm-12">
@@ -153,16 +153,19 @@
 
 									<div class="form-group col-lg-6 col-md-6 col-sm-12">
 										<select type="text " name="outlet" onchange="tampilkan()" placeholder="Makanan disajikan" required> Pilih Outlet
-										<option value="Mangsi Merdeka">Mangsi Merdeka | Mix Your Own Grill</option>
-										<option value="Mangsi Tropical">Mangsi Tropical | Mix Your Own Salad</option>
-										<option value="Mangsi Teuku">Mangsi Teuku Umar Barat | Mix Your Own Grill</option>
+										<?php foreach ($store as $str) { ?>
+										<option value="Mangsi Merdeka"><?php echo $str->nama_store; ?></option>
+										<?php } ?>
 									</div>
 									
 
 									<div class="form-group col-lg-6 col-md-6 col-sm-12">
 										<input type="checkbox" name="Makanan" placeholder="Makanan disajikan" required> Makanan disajikan pada saat jam kedatangan
 									</div>
-
+								</div>
+								<br>
+								<div class="form-group col-lg-12 col-md-12 col-sm-12">
+									<button type="submit" class="theme-btn btn-style-four clearfix"><span class="icon flaticon-arrow-pointing-to-right" href="<?php echo base_url(); ?>/ReservasiSite"></span>Lanjut</button>
 								</div>
 							</form>
 							<!-- Contact Form -->
@@ -191,102 +194,3 @@
 		</div>
 	</section>
 	<!-- End Contact Page Section -->
-	<!-- Menu Section Two -->
-    <section class="menu-section-two">
-		<div class="auto-container">
-			<div class="row clearfix">
-				
-				<!-- Menu Block Three -->
-				<div class="menu-block-three col-lg-4 col-md-6 col-sm-12">
-					<div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-						<div class="content">
-							<div class="menu-title">Main Course</div>
-							<!-- Menu Item -->
-							<div class="menu-item">
-								<h6><a href="#">Beef Super Grill</a></h6>
-								<div class="sub-title">Daging sapi tenderloin panggang yang lembut dan diproses dengan bumbu istimewa.</div>
-								<div class="price-box">
-									<div class="price"> Harga Rp.75.000</div>
-										<input type="number" name="harga" placeholder="kuantitas" required>
-								</div>
-							</div>
-							<!-- Menu Item -->
-							<div class="menu-item">
-								<h6><a href="#">Atau</a></h6>
-								<input type="checkbox" name="poin" placeholder="Poin" required> Tukar Poin?
-								<div class="price-box">
-									<div class="price">75 Poin/Item</div>
-								</div>
-							</div>
-						</div>
-						<div class="image">
-							<a href="#"><img src="../foodily/images/daging-menu.jpg" alt="" /></a>
-						</div>
-					</div>
-				</div>
-				
-				<!-- Menu Block Three -->
-				<div class="menu-block-three col-lg-4 col-md-6 col-sm-12">
-					<div class="inner-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-						<div class="content">
-							<div class="menu-title">Side dish</div>
-							<!-- Menu Item -->
-							<div class="menu-item">
-								<h6><a href="#">Mangsi Super Pizza</a></h6>
-								<div class="sub-title">Pizza dengan topping sosis dan keju mozarella</div>
-								<div class="price-box">
-									<div class="price">Harga Rp.50.000</div>
-									<input type="number" name="harga" placeholder="kuantitas" required>
-								</div>
-							</div>
-							<!-- Menu Item -->
-							<!-- <div class="menu-item">
-								<h6><a href="#">young keeps & Asparagus</a></h6>
-								<div class="sub-title">Crispy black garlic</div>
-								<div class="price-box">
-									<div class="price">$15</div>
-								</div>
-							</div> -->
-						</div>
-						<div class="image">
-							<a href="#"><img src="<?php echo base_url() ?>/assets/images/Pizza.png" alt="" /></a>
-						</div>
-					</div>
-				</div>
-				
-				<!-- Menu Block Three -->
-				<div class="menu-block-three col-lg-4 col-md-6 col-sm-12">
-					<div class="inner-box wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
-						<div class="content">
-							<div class="menu-title">Coffee</div>
-							<!-- Menu Item -->
-							<div class="menu-item">
-								<h6><a href="#">Coffee Mangsi Latte</a></h6>
-								<div class="price-box">
-									<div class="price">Harga Rp.15.000</div>
-									<input type="number" name="harga" placeholder="kuantitas" required>
-								</div>
-							</div>
-							<!-- Menu Item -->
-							<div class="menu-item">
-								<h6><a href="#">Atau</a></h6>
-								<input type="checkbox" name="poin" placeholder="Poin" required> Tukar Poin?
-								<div class="price-box">
-									<div class="price">15 Poin/Item</div>
-								</div>
-							</div>
-						</div>
-						<div class="image">
-							<a href="#"><img src="../foodily/images/Mangsi Logo Coffee Powder.jpg" alt="" /></a>
-						</div>
-					</div>
-				</div>
-
-				<div class="form-group col-lg-12 col-md-12 col-sm-12">
-					<button type="submit" class="theme-btn btn-style-four clearfix"><span class="icon flaticon-arrow-pointing-to-right"></span>Send</button>
-				</div>
-				
-			</div>
-		</div>
-	</section>
-	<!-- End Menu Section Two -->
