@@ -34,6 +34,7 @@ class Auth extends CI_Controller {
                 $_SESSION['nama_pelanggan'] = $pelanggan['nama_pelanggan'];
                 $_SESSION['email_pelanggan'] = $pelanggan['email_pelanggan'];
                 $_SESSION['nomor_telepon_pelanggan'] = $pelanggan['nomor_telepon_pelanggan'];
+                $_SESSION['alamat_pelanggan'] = $pelanggan['alamat_pelanggan'];
                 $_SESSION['point_pelanggan'] = $pelanggan['point_pelanggan'];
                 $_SESSION['image'] = $pelanggan['image'];
                 

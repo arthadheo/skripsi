@@ -14,5 +14,11 @@ class Auth_model extends CI_Model{
         $query = $this->db->get('menu');
         return $query->result();
     }
+
+    public function pembayaran()
+    {
+        $query = $this->db->get('reservasi');
+        return $query->result();
+    }
     
 }

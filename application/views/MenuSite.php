@@ -2,7 +2,7 @@
 <section class="page-title" style="background-image: url(<?php echo base_url(); ?>/assets/images/untuk-background.jpg">
 		<div class="pattern-layer" style="background-image: url(<?php echo base_url(); ?>/assets/images/main-slider/pattern-7.png)"></div>
     	<div class="auto-container">
-			<h2>Our Menu</h2>
+			<h2>Menu Mangsi</h2>
 			<!-- <ul class="page-breadcrumb">
 				<li><a href="index.html">home</a></li>
 				<li>Menu</li>
