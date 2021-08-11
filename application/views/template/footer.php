@@ -86,7 +86,7 @@
 <!--End pagewrapper-->
 
 <!-- Search Popup -->
-<div class="search-popup">
+<!-- <div class="search-popup">
 	<button class="close-search style-two"><span class="flaticon-multiply"></span></button>
 	<button class="close-search"><span class="flaticon-up-arrow-1"></span></button>
 	<form method="post" action="blog.html">
@@ -95,7 +95,7 @@
 			<button type="submit"><i class="fa fa-search"></i></button>
 		</div>
 	</form>
-</div>
+</div> -->
 <!-- End Header Search -->
 
 <!--Scroll to top-->

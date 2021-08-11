@@ -84,7 +84,7 @@ class Auth extends CI_Controller {
             $this->db->insert('pelanggan', $data);
             $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
             Selamat akun anda telah terdaftar, silahkan login</div>');
-            redirect('auth/login');
+            redirect('WelcomeSite');
            
         }
 		

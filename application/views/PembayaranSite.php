@@ -56,13 +56,15 @@
 </section>
 <section class="contact-page-section">
     <div class="auto-container">
-    <form method="POST" action="<?php echo base_url('WelcomeSite') ?>">
-    <div class="form-group">
-        <label>Gambar</label>
-        <input type="file" name="userfile" class="form-control" size="20" required>
-        <input type="submit" value="upload" />
-    </div>
-    </form>
+        <?php echo form_open_multipart('Pembayaran/do_upload');?>
+        
+            <div class="form-group">
+                <label>Upload bukti pembayaran</label>
+                <input type="file" name="bukti_pembayaran" class="form-control" size="20" required>
+                <input type="submit" value="upload" />
+            </div>
+        
+        <?php echo form_close(); ?>
 </section>
 </body>
 </html>

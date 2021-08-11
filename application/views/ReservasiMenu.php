@@ -20,7 +20,7 @@
 					<div class="sec-title">
 						<h4 class="title">Isi Form Reservasi</h4>
 					</div>
-			<form method="POST" action="halaman-pembayaran" id="form-menu">
+			<form method="POST" action="Pembayaran" id="form-menu">
 			<div class="row clearfix">
 			
 					<?php foreach ($menu as $mn) { ?>
@@ -41,7 +41,7 @@
 									<?php if($mn->point_menu){?>
 										<div class="menu-item">
 											<h6><a href="#">Atau</a></h6>
-											<input type="checkbox" name="poin" placeholder="Poin" required> Tukar Poin?
+											<input type="checkbox" name="poin" placeholder="Poin"> Tukar Poin?
 											<div class="price-box">
 												<div class="price"><?php echo $mn->point_menu; ?> Poin/Item</div>
 											</div>
@@ -56,7 +56,7 @@
 						</div>
 							<?php } ?>
 							<div class="form-group col-lg-6 col-md-6 col-sm-12">
-									<input type="checkbox" name="Makanan" placeholder="Makanan disajikan" required> Makanan disajikan pada saat jam kedatangan
+									<input type="checkbox" name="Makanan" placeholder="Makanan disajikan"> Makanan disajikan pada saat jam kedatangan
 								</div>
 								<div class="form-group col-lg-12 col-md-12 col-sm-12">
 									<button type="submit" class="theme-btn btn-style-four clearfix"><span class="icon flaticon-arrow-pointing-to-right"></span>Submit</button>

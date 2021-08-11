@@ -20,6 +20,10 @@ class Pembayaran extends CI_Controller {
 
 	public function do_upload()
         {
+            $bukti_pembayaran = $_FILES['bukti_pembayaran'];
+            if ($bukti_pembayaran=''){
+
+            }else{
                 $config['upload_path']          = './gambar/';
                 $config['allowed_types']        = 'PNG|jpg|png';
                 $config['max_size']             = 10000;
@@ -27,23 +31,21 @@ class Pembayaran extends CI_Controller {
                 $config['max_height']           = 10000;
 
                 $this->load->library('upload', $config);
-
-                if ( $this->upload->do_upload('userfile'))
+                if (!$this->upload->do_upload('bukti_pembayaran'))
                 {
-					$bukti_pembayaran = $this->upload->data();
-					$bukti_pembayaran = $bukti_pembayaran['file_name'];
+                    echo "Upload Gagal"; die();
+                }else {
+                    $bukti_pembayaran = $this->upload->data('file_name');
 
-					$data = array(
-						'userfile' => $bukti_pembayaran
-					);
-					$this->db->insert('pembayaran', $data);
-					$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
-            		Bukti pembayaran berhasil di upload!</div>');
-					redirect('WelcomeSite');
+                    $data = array(
+                        'bukti_pembayaran' => $bukti_pembayaran
+                    );
+                    $this->db->insert('pembayaran', $data);
+                    $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
+                    Bukti pembayaran berhasil di upload!</div>');
+                    redirect('WelcomeSite');
                 }
-                else
-                {
-                    
-                }
+            }
+ 
         }
 }
