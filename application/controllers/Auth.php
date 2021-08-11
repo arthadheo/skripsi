@@ -17,7 +17,7 @@ class Auth extends CI_Controller {
 
         if($this->form_validation->run() == false){
             $data['title'] = 'Login Mangsi';
-		    $this->load->view('LoginSite');
+		    $this->load->view('LoginSite', $data);
         }else{
             $this->_proseslogin();
         }

@@ -15,11 +15,12 @@ class WelcomeSite extends CI_Controller {
 	{
 		$s['title'] = 'Home Mangsi';
 		$data['store'] = $this->Auth_model->outlet();
+		$data['promo'] = $this->Auth_model->promo();
 
         $this->load->view('template/header', $s);
 		$this->load->view('WelcomeSite', $data);
         $this->load->view('template/footer');
-
-		
 	}
+
+
 }

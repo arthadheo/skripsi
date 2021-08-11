@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Web Admin Mangsi</title>
+    <title><?php echo $title; ?></title>
 
     <?php $this->load->view('template_admin/ext/css'); ?>
 

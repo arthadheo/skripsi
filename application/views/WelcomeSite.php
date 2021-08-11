@@ -6,6 +6,7 @@
          <div class="main-slider-carousel owl-carousel owl-theme">
              
              <!-- Slide -->
+             <?php foreach ($promo as $pr) { ?>
              <div class="slide">
                  <div class="auto-container">
                      <div class="row clearfix">
@@ -13,11 +14,11 @@
                          <!-- Content Column -->
                          <div class="content-column col-lg-6 col-md-12 col-sm-12">
                              <div class="inner-column">
-                                 <h1><span class="first-letter">Grand</span><span class="second-letter">Opening</span></h1>
-                                 <div class="text">Grand Opening Mangsi Teuku Umar Barat, 8 September 2019 | Jalan Teuku Umar Barat No.84, Denpasar.</div>
+                                 <h1><span class="first-letter" name="Judul"><?php echo $pr->judul; ?></span></h1>
+                                 <div class="text" name="deskripsi"><?php echo $pr->deskripsi; ?></div>
                                  <div class="btns-box">
                                  </div>
-                                 <div class="icons-box">
+                                 <div class="icons-box" >
                                      <img src="<?php echo base_url() ?>/assets/images/main-slider/icons.png" alt="" />
                                  </div>
                              </div>
@@ -26,9 +27,9 @@
                          <!-- Image Column -->
                          <div class="image-column col-lg-6 col-md-12 col-sm-12">
                              <div class="inner-column">
-                                 <div class="icon-layer-three" style="background-image: url(<?php echo base_url() ?>/assets/images/main-slider/icon-3.png)"></div>
+                                 <div name="gambar_promosi" class="icon-layer-three" style="background-image: url(<?php echo base_url() ?>/assets/images/main-slider/icon-3.png)"></div>
                                  <div class="image">
-                                     <img src="<?php echo base_url() ?>/assets/images/Baliho Grand Opening Mangsi Teuku Umar Barat.jpg" alt="" />
+                                     <img src="<?php echo $pr->gambar_promosi; ?>" alt="" />
                                  </div>
                              </div>
                          </div>
@@ -36,15 +37,15 @@
                      </div>
                  </div>
              </div>
-             
-             <!-- Slide -->
-             <div class="slide">
+             <?php } ?>
+            
+             <!-- <div class="slide"> -->
                  <!-- <div class="icon-layer-two" style="background-image: url(images/main-slider/icon-6.png)"></div> -->
-                 <div class="auto-container">
-                     <div class="row clearfix">
+                 <!-- <div class="auto-container">
+                     <div class="row clearfix"> -->
                      
                          <!-- Content Column -->
-                         <div class="content-column col-lg-6 col-md-12 col-sm-12">
+                         <!-- <div class="content-column col-lg-6 col-md-12 col-sm-12">
                              <div class="inner-column">
                                  <h1><span class="first-letter">Makan</span><span class="second-letter">Sepuasnya</span></h1>
                                  <div class="text">Makan Sepuasnya Rp.90.000 | Hanya di Mangsi Trans Studio Mall Bali 12 - 31 Desember 2019.</div>
@@ -54,10 +55,10 @@
                                      <img src="<?php echo base_url() ?>/assets/images/main-slider/icons.png" alt="" />
                                  </div>
                              </div>
-                         </div>
+                         </div> -->
                          
                          <!-- Image Column -->
-                         <div class="image-column col-lg-6 col-md-12 col-sm-12">
+                         <!-- <div class="image-column col-lg-6 col-md-12 col-sm-12">
                              <div class="inner-column">
                                  <div class="icon-layer-three" style="background-image: url(<?php echo base_url() ?>/assets/images/main-slider/icon-3.png)"></div>
                                  <div class="image">
@@ -68,19 +69,19 @@
                          
                      </div>
                  </div>
-             </div>
+             </div> -->
              
              <!-- Slide -->
-             <div class="slide style-two">
+             <!-- <div class="slide style-two"> -->
                  <!-- <div class="icon-layer-one" style="background-image: url(images/main-slider/icon-1.png)"></div>
                  <div class="icon-layer-two" style="background-image: url(images/main-slider/icon-7.png)"></div> -->
-                 <div class="auto-container">
-                     <div class="row clearfix">
+                 <!-- <div class="auto-container">
+                     <div class="row clearfix"> -->
                      
                          <!-- Content Column -->
-                         <div class="content-column col-lg-6 col-md-12 col-sm-12">
+                         <!-- <div class="content-column col-lg-6 col-md-12 col-sm-12">
                              <div class="inner-column">
-                                 <h1><span class="first-letter">Habis Shopping</span><span class="second-letter">Makan di Mangsi</span></h1>
+                                 <h1><span class="first-letter"> </span><span class="second-letter">Makan di Mangsi</span></h1>
                                  <div class="text">Bawa struk belanja produk H&M TSM. Dapatkan diskon spesial di Mangsi.</div>
                                  <div class="btns-box">
                                  </div>
@@ -88,10 +89,10 @@
                                      <img src="<?php echo base_url() ?>/assets/images/main-slider/icons.png" alt="" />
                                  </div>
                              </div>
-                         </div>
+                         </div> -->
                          
                          <!-- Image Column -->
-                         <div class="image-column col-lg-6 col-md-12 col-sm-12">
+                         <!-- <div class="image-column col-lg-6 col-md-12 col-sm-12">
                              <div class="inner-column">
                                  <div class="icon-layer-three" style="background-image: url(<?php echo base_url() ?>/assets/images/main-slider/icon-3.png)"></div>
                                  <div class="image">
@@ -101,8 +102,8 @@
                          </div>
                          
                      </div>
-                 </div>
-             </div>
+                 </div> -->
+             <!-- </div> -->
              
          </div>
          
@@ -136,7 +137,7 @@
                              <div class="separate"></div>
                              <div class="text">Daging sapi tenderloin panggang yang lembut dan diproses dengan bumbu istimewa.</div>
                          </div>
-                         <a href="menu.html" class="theme-btn btn-style-two clearfix"><span class="icon"></span>Reserve here</a>
+                         <a href="<?php echo base_url(); ?>Login" class="theme-btn btn-style-two clearfix"><span class="icon"></span>Login disini untuk pesan</a>
                      </div>
                  </div>
                  
@@ -165,7 +166,6 @@
                          </div>
                          <div class="lower-content">
                              <h6><a href="milkshake.html">Main Course</a></h6>
-                             <div class="products">3 products</div>
                          </div>
                      </div>
                  </div>
@@ -178,7 +178,6 @@
                          </div>
                          <div class="lower-content">
                              <h6><a href="milkshake.html">Side dish</a></h6>
-                             <div class="products">3 products</div>
                          </div>
                      </div>
                  </div>
@@ -191,7 +190,6 @@
                          </div>
                          <div class="lower-content">
                              <h6><a href="milkshake.html">Juice</a></h6>
-                             <div class="products">3 products</div>
                          </div>
                      </div>
                  </div>
@@ -204,7 +202,6 @@
                          </div>
                          <div class="lower-content">
                              <h6><a href="milkshake.html">Coffee & Tea</a></h6>
-                             <div class="products">3 products</div>
                          </div>
                      </div>
                  </div>

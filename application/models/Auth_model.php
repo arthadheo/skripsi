@@ -20,5 +20,17 @@ class Auth_model extends CI_Model{
         $query = $this->db->get('reservasi');
         return $query->result();
     }
+
+    public function promo()
+    {
+        $query = $this->db->get('promo');
+        return $query->result();
+    }
+
+    public function pelanggan()
+    {
+        $query = $this->db->get('pelanggan');
+        return $query->result();
+    }
     
 }

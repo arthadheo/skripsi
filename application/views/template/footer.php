@@ -55,22 +55,6 @@
 									</ul>
 								</div>
 							</div>
-							
-							<!-- Footer Column -->
-							<!-- <div class="footer-column col-lg-6 col-md-6 col-sm-12">
-								<div class="footer-widget newsletter-widget">
-									<h6>Subscribe</h6>
-									<div class="newsletter-form">
-										<form method="post" action="contact.html">
-											<div class="form-group">
-												<input type="email" name="email" value="" placeholder="Your Email" required="">
-												<button type="submit" class="theme-btn submit-btn">Subscribe Now</button>
-											</div>
-										</form>
-									</div>
-								</div>
-							</div> -->
-							
 						</div>
 					</div>
 					

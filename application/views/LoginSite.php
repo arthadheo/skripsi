@@ -37,7 +37,7 @@
                     <form method="post", action="<?php echo base_url('auth/login');?>">
                                 <div class="input-group">
                                     <label class="label">Email</label>
-                                    <input class="input--style-4" type="text" name="email_pelanggan">
+                                    <input class="input--style-4" type="email" name="email_pelanggan">
                                     <small class="text-danger"><?php echo form_error('email_pelanggan') ?></small>
                                 </div>
                                 <div class="input-group">
