@@ -8,60 +8,43 @@
     <div class="container-fluid">
 
         <!-- Page Heading -->
-        <h1 class="h3 mb-2 text-gray-800">Kelola Data Pelanggan</h1>
+        <h1 class="h3 mb-2 text-gray-800">Kelola Outlet</h1>
         <!-- <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
             For more information about DataTables, please visit the <a target="_blank"
                 href="https://datatables.net">official DataTables documentation</a>.</p> -->
+
+                
+
 <div class="modal fade" id="modalSubscriptionForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header text-center">
-                <h4 class="modal-title w-100 font-weight-bold">Tambah Pelanggan</h4>
+                <h4 class="modal-title w-100 font-weight-bold">Tambah Outlet</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form method="POST" action="<?php echo base_url('KelolaPelanggan') ?>">
+            <form method="POST" action="<?php echo base_url('KelolaOutlet') ?>">
             <div class="modal-body mx-3">
                 <div class="md-form mb-5">
-                <input type="text" name="nama_pelanggan" class="form-control validate">
+                <input type="text" name="nama_store" class="form-control validate">
                 <label data-error="wrong" data-success="right" for="form3">Nama</label>
                 </div>
 
                 <div class="md-form mb-4">
-                <input type="email" name="email_pelanggan" class="form-control validate">
-                <label data-error="wrong" data-success="right" for="form2">Email</label>
+                <input type="text" name="lokasi_store" class="form-control validate">
+                <label data-error="wrong" data-success="right" for="form2">Lokasi</label>
                 </div>
 
                 <div class="md-form mb-4">
-                <input type="password" name="katasandi_pelanggan" class="form-control validate">
-                <label data-error="wrong" data-success="right" for="form2">Password</label>
-                </div>
-
-                <div class="md-form mb-4">
-                <input type="password" name="katasandi_pelanggan2" class="form-control validate">
-                <label data-error="wrong" data-success="right" for="form2">Ulangi Password</label>
-                </div>
-
-                <div class="md-form mb-4">
-                <input type="text" name="nomor_telepon_pelanggan" class="form-control validate">
+                <input type="text" name="nomor_telepon_restoran" class="form-control validate">
                 <label data-error="wrong" data-success="right" for="form2">Nomor Telepon</label>
                 </div>
 
                 <div class="md-form mb-4">
-                <input type="text" name="alamat_pelanggan" class="form-control validate">
-                <label data-error="wrong" data-success="right" for="form2">Alamat Rumah</label>
-                </div>
-
-                <div class="md-form mb-4">
-                <input type="date" name="Birthdate" class="form-control validate">
-                <label data-error="wrong" data-success="right" for="form2">Tanggal Lahir</label>
-                </div>
-
-                <div class="md-form mb-4">
-                <input type="text" name="point_pelanggan" class="form-control validate">
-                <label data-error="wrong" data-success="right" for="form2">Poin</label>
+                <input type="text" name="kuota" class="form-control validate">
+                <label data-error="wrong" data-success="right" for="form2">Kuota</label>
                 </div>
 
             </div>
@@ -87,31 +70,28 @@
                         <thead>
                             <tr>
                                 <th>Nama</th>
-                                <th>Email</th>
+                                <th>Lokasi</th>
                                 <th>Nomor Telepon</th>
-                                <th>Alamat Pelanggan</th>
-                                <th>Point Pelanggan</th>
+                                <th>Kuota</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
                         <tfoot>
                             <tr>
                                 <th>Nama</th>
-                                <th>Email</th>
+                                <th>Lokasi</th>
                                 <th>Nomor Telepon</th>
-                                <th>Alamat Pelanggan</th>
-                                <th>Point Pelanggan</th>
+                                <th>Kuota</th>
                                 <th>Action</th>
                             </tr>
                         </tfoot>
-                        <?php foreach ($pelanggan as $pl) { ?>
+                        <?php foreach ($store as $str) { ?>
                         <tbody>
                             <tr>
-                                <td><?php echo $pl->nama_pelanggan; ?></td>
-                                <td><?php echo $pl->email_pelanggan; ?></td>
-                                <td><?php echo $pl->nomor_telepon_pelanggan; ?></td>
-                                <td><?php echo $pl->alamat_pelanggan; ?></td>
-                                <td><?php echo $pl->point_pelanggan; ?></td>
+                                <td><?php echo $str->nama_store; ?></td>
+                                <td><?php echo $str->lokasi_store; ?></td>
+                                <td><?php echo $str->nomor_telepon_restoran; ?></td>
+                                <td><?php echo $str->kuota; ?></td>
                                 <td><button class="btn btn-primary" type="button">
                                         <i class="fas fa-sm"></i>Edit
                                     </button>

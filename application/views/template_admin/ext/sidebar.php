@@ -47,6 +47,11 @@
         <span>Kelola Promo</span></a>
 </li>
 
+<li class="nav-item">
+    <a class="nav-link" href="<?php echo base_url(); ?>KelolaOutlet">
+        <span>Kelola Outlet</span></a>
+</li>
+
 <!-- Nav Item - Tables -->
 <li class="nav-item">
     <a class="nav-link" href="<?php echo base_url(); ?>KelolaMenuMakanan">
