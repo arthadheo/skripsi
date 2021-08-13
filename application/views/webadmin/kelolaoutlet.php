@@ -14,7 +14,7 @@
                 href="https://datatables.net">official DataTables documentation</a>.</p> -->
 
                 
-
+<!-- modal tambah -->
 <div class="modal fade" id="modalSubscriptionForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -55,6 +55,52 @@
         </div>
     </div>
 </div>
+<!-- modal tambah end -->
+
+<!-- modal edit -->
+<!-- <?php foreach ($store as $str => $value) { ?>
+<div class="modal fade" id="modalEdit <?= $value->id_store; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h4 class="modal-title w-100 font-weight-bold">Edit Outlet</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form method="POST" action="<?php echo base_url() ?>KelolaOutlet/update">
+            <div class="modal-body mx-3">
+                <div class="md-form mb-5">
+                <input type="text" name="nama_store" class="form-control validate" value="<?php echo $str->nama_store; ?>">
+                <label data-error="wrong" data-success="right" for="form3">Nama</label>
+                </div>
+
+                <div class="md-form mb-4">
+                <input type="text" name="lokasi_store" class="form-control validate" value="<?php echo $str->lokasi_store; ?>">
+                <label data-error="wrong" data-success="right" for="form2">Lokasi</label>
+                </div>
+
+                <div class="md-form mb-4">
+                <input type="text" name="nomor_telepon_restoran" class="form-control validate" value="<?php echo $str->nomor_telepon_restoran; ?>">
+                <label data-error="wrong" data-success="right" for="form2">Nomor Telepon</label>
+                </div>
+
+                <div class="md-form mb-4">
+                <input type="text" name="kuota" class="form-control validate" value="<?php echo $str->kuota; ?>">
+                <label data-error="wrong" data-success="right" for="form2">Kuota</label>
+                </div>
+
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <button class="btn btn-primary">Submit <i class="ml-1"></i></button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+<?php } ?> -->
+<!-- modal edit end -->
 
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
@@ -93,15 +139,14 @@
                                 <td><?php echo $str->nomor_telepon_restoran; ?></td>
                                 <td><?php echo $str->kuota; ?></td>
                                 <td>
-                                    <button class="btn btn-primary" type="button">
+                                    <button class="btn btn-primary" type="button"  class="btn btn-primary" type="button" data-toggle="modal" data-target="#modalEdit<?php echo $value->id_store; ?>" >
                                         <i class="fas fa-sm"></i>Edit
                                     </button>
-                                    <form class="<?php echo base_url('KelolaOutlet'); ?>" method="post">
+                                    
                                     <input type="hidden" value="<?php echo  $str->id_store; ?>" name="id_store">
-                                    <button onclick="return confirm('Yakin ingin dihapus?')" class="btn btn-primary" type="button">
+                                    <a href="<?= base_url('KelolaOutlet/delete/'.$value->id_store) ?>" onclick="return confirm('Yakin ingin dihapus?')" class="btn btn-primary" type="button">
                                         <i class="fas fa-sm"></i>Delete
-                                    </button>
-                                    </form>
+                                    </a>
                                 </td>
                             </tr>
                         </tbody>

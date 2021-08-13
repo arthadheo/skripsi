@@ -40,10 +40,43 @@ class KelolaOutlet extends CI_Controller {
         }
 	}
 
-    public function delete()
+    public function delete($id_store)
     {
-        $id_store = $this->input->post('id_store');
-        $this->Auth_model->delete($id_store);
+        $data = array(
+            'id_store' => $id_store
+        );
+        $this->Auth_model->delete($data);
         redirect('KelolaOutlet');
     }
+
+    // public function edit_store($id_store)
+    // {
+    //     $id_store = array('id_store', $id_store);
+    //     $data['store'] = $this->Auth_model->edit_store($id_store, 'store')->result();
+    //     $this->load->view('KelolaOutlet', $data);
+    // }
+
+    // public function update()
+    // {
+    //     $nama_store = $this->input->post('nama_store');
+    //     $id_store = $this->input->post('id_store');
+    //     $lokasi_store = $this->input->post('lokasi_store');
+    //     $nomor_telepon_restoran = $this->input->post('nomor_telepon_restoran');
+    //     $kuota = $this->input->post('kuota');
+
+    //     $data = array(
+    //         'nama_store' => $nama_store,
+    //         'id_store' => $id_store,
+    //         'lokasi_store' => $lokasi_store,
+    //         'nomor_telepon_restoran' => $nomor_telepon_restoran,
+    //         'kuota' => $kuota
+    //     );
+
+    //     $id_store = array(
+    //         'id_store' => $id_store
+    //     );
+
+    //     $this->Auth_model->update_store($id_store,$data,'store');
+    //     redirect('KelolaOutlet');
+    // }
 }

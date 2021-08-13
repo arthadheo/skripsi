@@ -34,10 +34,20 @@ class Auth_model extends CI_Model{
     }
 
     
-    public function delete($id_store)
+    public function delete($data)
     {
-        $this->db->where('id_store', $id_store);
-        $this->db->delete('store');
+        $this->db->where('id_store', $data['id_store']);
+        $this->db->delete('store', $data);
     }
     
+    // public function edit_store($id_store, $store)
+    // {
+    //     return $this->db->get_where($id_store, $store);
+    // }
+
+    // public function update_store($id_store,$data,$store)
+    // {
+    //     $this->db->where($id_store);
+    //     $this->db->update($store,$data);
+    // }
 }
