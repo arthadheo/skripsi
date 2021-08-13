@@ -36,7 +36,7 @@
         	<div class="auto-container clearfix">
             	
 				<div class="pull-left logo-box">
-					<div class="logo"><a href="index.html"><img src="../foodily/images/Warna logo Mangsi-01.jpg" alt="" title=""></a></div>
+					<div class="logo"><a href="<?php echo base_url(); ?>WelcomeSite"><img src="../foodily/images/Warna logo Mangsi-01.jpg" alt="" title=""></a></div>
 				</div>
 				
 				<div class="nav-outer clearfix">

@@ -29,7 +29,8 @@ class KelolaOutlet extends CI_Controller {
                 'nama_store' => ($this->input->post('nama_store', true)),
                 'lokasi_store' => ($this->input->post('lokasi_store', true)),
                 'nomor_telepon_restoran' => ($this->input->post('nomor_telepon_restoran', true)),
-                'kuota' => ($this->input->post('kuota', true))
+                'kuota' => ($this->input->post('kuota', true)),
+                'id_store' => ($this->input->post('id_store', true))
             ];
 
             $this->db->insert('store', $data);
@@ -38,4 +39,11 @@ class KelolaOutlet extends CI_Controller {
             redirect('KelolaOutlet');
         }
 	}
+
+    public function delete()
+    {
+        $id_store = $this->input->post('id_store');
+        $this->Auth_model->delete($id_store);
+        redirect('KelolaOutlet');
+    }
 }

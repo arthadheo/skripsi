@@ -32,5 +32,12 @@ class Auth_model extends CI_Model{
         $query = $this->db->get('pelanggan');
         return $query->result();
     }
+
+    
+    public function delete($id_store)
+    {
+        $this->db->where('id_store', $id_store);
+        $this->db->delete('store');
+    }
     
 }

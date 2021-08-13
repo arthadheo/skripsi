@@ -92,12 +92,16 @@
                                 <td><?php echo $str->lokasi_store; ?></td>
                                 <td><?php echo $str->nomor_telepon_restoran; ?></td>
                                 <td><?php echo $str->kuota; ?></td>
-                                <td><button class="btn btn-primary" type="button">
+                                <td>
+                                    <button class="btn btn-primary" type="button">
                                         <i class="fas fa-sm"></i>Edit
                                     </button>
-                                    <button class="btn btn-primary" type="button">
+                                    <form class="<?php echo base_url('KelolaOutlet'); ?>" method="post">
+                                    <input type="hidden" value="<?php echo  $str->id_store; ?>" name="id_store">
+                                    <button onclick="return confirm('Yakin ingin dihapus?')" class="btn btn-primary" type="button">
                                         <i class="fas fa-sm"></i>Delete
                                     </button>
+                                    </form>
                                 </td>
                             </tr>
                         </tbody>

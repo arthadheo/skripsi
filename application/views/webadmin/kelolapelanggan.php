@@ -112,12 +112,16 @@
                                 <td><?php echo $pl->nomor_telepon_pelanggan; ?></td>
                                 <td><?php echo $pl->alamat_pelanggan; ?></td>
                                 <td><?php echo $pl->point_pelanggan; ?></td>
-                                <td><button class="btn btn-primary" type="button">
+                                <td>
+                                    <button class="btn btn-primary" type="button">
                                         <i class="fas fa-sm"></i>Edit
                                     </button>
+                                    <form>
                                     <button class="btn btn-primary" type="button">
                                         <i class="fas fa-sm"></i>Delete
                                     </button>
+                                    </form>
+                                    
                                 </td>
                             </tr>
                         </tbody>

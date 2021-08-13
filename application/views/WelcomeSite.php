@@ -162,10 +162,10 @@
                  <div class="beverage-block col-xl-3 col-lg-4 col-md-6 col-sm-12">
                      <div class="inner-box">
                          <div class="image">
-                             <a href="milkshake.html"><img src="<?php echo base_url() ?>/assets/images/daging-1.jpg" alt="" /></a>
+                             <a href="#"><img src="<?php echo base_url() ?>/assets/images/daging-1.jpg" alt="" /></a>
                          </div>
                          <div class="lower-content">
-                             <h6><a href="milkshake.html">Main Course</a></h6>
+                             <h6><a href="#">Main Course</a></h6>
                          </div>
                      </div>
                  </div>
@@ -174,10 +174,10 @@
                  <div class="beverage-block col-xl-3 col-lg-4 col-md-6 col-sm-12">
                      <div class="inner-box">
                          <div class="image">
-                             <a href="milkshake.html"><img src="<?php echo base_url() ?>/assets/images/sosis-1.jpg" alt="" /></a>
+                             <a href="#"><img src="<?php echo base_url() ?>/assets/images/sosis-1.jpg" alt="" /></a>
                          </div>
                          <div class="lower-content">
-                             <h6><a href="milkshake.html">Side dish</a></h6>
+                             <h6><a href="#">Side dish</a></h6>
                          </div>
                      </div>
                  </div>
@@ -186,10 +186,10 @@
                  <div class="beverage-block col-xl-3 col-lg-4 col-md-6 col-sm-12">
                      <div class="inner-box">
                          <div class="image">
-                             <a href="milkshake.html"><img src="<?php echo base_url() ?>/assets/images/juice.jpg" alt="" /></a>
+                             <a href="#"><img src="<?php echo base_url() ?>/assets/images/juice.jpg" alt="" /></a>
                          </div>
                          <div class="lower-content">
-                             <h6><a href="milkshake.html">Juice</a></h6>
+                             <h6><a href="#">Juice</a></h6>
                          </div>
                      </div>
                  </div>
@@ -198,10 +198,10 @@
                  <div class="beverage-block col-xl-3 col-lg-4 col-md-6 col-sm-12">
                      <div class="inner-box">
                          <div class="image">
-                             <a href="milkshake.html"><img src="<?php echo base_url() ?>/assets/images/coffee-1.jpg" alt="" /></a>
+                             <a href="#"><img src="<?php echo base_url() ?>/assets/images/coffee-1.jpg" alt="" /></a>
                          </div>
                          <div class="lower-content">
-                             <h6><a href="milkshake.html">Coffee & Tea</a></h6>
+                             <h6><a href="#">Coffee & Tea</a></h6>
                          </div>
                      </div>
                  </div>
@@ -210,7 +210,7 @@
              
              <!-- Button Box -->
              <div class="button-box text-center">
-                 <a href="menu.html" class="theme-btn btn-style-two clearfix"><span class="icon"></span>View All Products</a>
+                 <a href="<?php echo base_url(); ?>Menu" class="theme-btn btn-style-two clearfix"><span class="icon"></span>View All Products</a>
              </div>
              
          </div>
