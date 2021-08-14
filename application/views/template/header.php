@@ -65,15 +65,6 @@
 					</nav>
 					
 					<!-- Main Menu End-->
-					<div class="outer-box clearfix">
-						
-						<!-- Search Btn -->
-						<div class="search-box-btn search-box-outer"><span class="icon fa fa-search"></span></div>
-						
-						<!-- Nav Btn -->
-						<div class="nav-btn navSidebar-button"><span class="icon flaticon-menu-2"></span></div>
-							
-					</div>
 				</div>
 				
             </div>

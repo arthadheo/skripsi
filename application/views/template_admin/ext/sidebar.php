@@ -65,7 +65,7 @@
 
 <!-- Nav Item - Tables -->
 <li class="nav-item">
-    <a class="nav-link" href="tables.html">
+    <a class="nav-link" href="<?php echo base_url(); ?>KelolaReservasi">
         <span>Kelola Reservasi</span></a>
 </li>
 
