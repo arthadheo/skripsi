@@ -31,6 +31,7 @@
                                 <th>Harga Menu</th>
                                 <th>Kategori Menu</th>
                                 <th>Point Menu</th>
+                                <th>Kuantitas</th>
                                 <th>Gambar Menu</th>
                                 <th>Action</th>
                             </tr>
@@ -42,6 +43,7 @@
                                 <th>Harga Menu</th>
                                 <th>Kategori Menu</th>
                                 <th>Point Menu</th>
+                                <th>Kuantitas</th>
                                 <th>Gambar Menu</th>
                                 <th>Action</th>
                             </tr>
@@ -54,6 +56,7 @@
                                 <td><?php echo $mn->harga_menu; ?></td>
                                 <td><?php echo $mn->kategori_menu; ?></td>
                                 <td><?php echo $mn->point_menu; ?></td>
+                                <td><?php echo $mn->qty_menu; ?></td>
                                 <td><?php echo $mn->image_menu; ?></td>
                                 <td><button class="btn btn-primary" type="button">
                                         <i class="fas fa-sm"></i>Edit

@@ -19,6 +19,7 @@
 				<div class="inner-column">
 					<div class="sec-title">
 						<h4 class="title">Isi Form Reservasi</h4>
+						<p>Poin hanya dapat ditukar dengan 1 pcs menu/1 transaksi reservasi</p>
 					</div>
 			<form method="POST" action="Pembayaran" id="form-menu">
 			<div class="row clearfix">
@@ -52,7 +53,10 @@
 								<div class="image">
 									<a href="#"><img src="<?php echo $mn->image_menu; ?>" alt="" /></a>
 								</div>
-								</div>
+							</div>
+							<br>
+							<label for="quantity">Quantity:</label>
+							<input type="number" id="quantity" name="quantity" min="0" max="<?php echo $mn->qty_menu; ?>" step="1" required>
 						</div>
 							<?php } ?>
 							<div class="form-group col-lg-6 col-md-6 col-sm-12">

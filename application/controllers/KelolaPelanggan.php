@@ -51,4 +51,13 @@ class KelolaPelanggan extends CI_Controller {
             redirect('KelolaPelanggan');
 	    }
     }
+
+    public function deletepelanggan($id_pelanggan)
+    {
+        $data = array(
+            'id_pelanggan' => $id_pelanggan
+        );
+        $this->Auth_model->deletepelanggan($data);
+        redirect('KelolaPelanggan');
+    }
 }

@@ -12,6 +12,8 @@
         <!-- <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
             For more information about DataTables, please visit the <a target="_blank"
                 href="https://datatables.net">official DataTables documentation</a>.</p> -->
+
+<!-- modal tambah -->
 <div class="modal fade" id="modalSubscriptionForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -72,7 +74,10 @@
         </div>
     </div>
 </div>
+<!-- modal tambah end -->
 
+
+<!-- modal edit end -->
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
@@ -116,12 +121,11 @@
                                     <button class="btn btn-primary" type="button">
                                         <i class="fas fa-sm"></i>Edit
                                     </button>
-                                    <form>
-                                    <button class="btn btn-primary" type="button">
+
+                                    <input type="hidden" value="<?php echo $pl->id_pelanggan; ?>" name="id_pelanggan">
+                                    <a href="<?= base_url('KelolaPelanggan/deletepelanggan/'.$pl->id_pelanggan) ?>" onclick="return confirm('Yakin ingin dihapus?')" class="btn btn-primary" type="button">
                                         <i class="fas fa-sm"></i>Delete
-                                    </button>
-                                    </form>
-                                    
+                                    </a>
                                 </td>
                             </tr>
                         </tbody>

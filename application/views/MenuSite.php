@@ -90,7 +90,8 @@
 								</div> -->
 							</div>
 							<div class="image">
-								<a href="#"><img src="<?php echo $mn->image_menu; ?>" alt="" /></a>
+								<a href="#"><img src="<?php echo $mn->image_menu; ?>" alt="" width="400px" height="350px">
+								</a>
 							</div>
 						</div>
 					</div>
