@@ -80,7 +80,8 @@
                             <th>Makanan</th>
                             <th>Harga</th>
                             <th>Kuantitas</th>
-                            <th>Total harga</th>	
+                            <th>Total harga</th>
+                            <th>Poin digunakan</th>	
                         </tr>
                     </thead>
                     <tbody>
@@ -90,6 +91,7 @@
                             <td>25.000</td>
                             <td>2</td>
                             <td>50.000</td>
+                            <td></td>
                         </tr>
                         <tr>
                             <td>2</td>
@@ -97,6 +99,7 @@
                             <td>50.000</td>
                             <td>1</td>
                             <td>50.000</td>
+                            <td></td>
                         </tr>
                         <tr>
                             <td>3</td>
@@ -104,17 +107,43 @@
                             <td>15.000</td>
                             <td>2</td>
                             <td>30.000</td>
+                            <td>15</td>
                         </tr>
                         <tr>
                             <td></td>
                             <td></td>
                             <td></td>
-                            <td>Jumlah Harga</td>
+                            <td>Jumlah</td>
                             <td>130.000</td>
+                            <td>15</td>
                         </tr>
                     </tbody>
                     </table>
                     <p style="font-weight: bolder;">Makanan disajikan ketika pelanggan sampai</p>
+                    <br>
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Poin yang didapat</th>
+                            <th>Poin yang berkurang</th>
+                            <th>Total poin sekarang</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>130</td>
+                            <td>15</td>
+                            <td>215</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>Poin yang didapat</th>
+                            <th>Poin yang berkurang</th>
+                            <th>Total poin sekarang</th>
+                        </tr>
+                    </tfoot>
+                    </table>
                 </div>
             </div>
             <div class="card-body">

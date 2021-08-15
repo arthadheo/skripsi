@@ -53,12 +53,16 @@
 							</button>
 						</div>
 						
+						<!-- data-login="<?php echo base_url($isLogin); ?>" -->
+
 						<div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
 							<ul class="navigation clearfix">
 								<li><a href="<?php echo base_url(); ?>WelcomeSite">Home</a></li>
 								<li><a href="<?php echo base_url(); ?>Menu">Menu</a></li>
 								<li><a href="<?php echo base_url(); ?>Reservasi">Reservasi</a></li>
-								<li><a href="<?php echo base_url(); ?>Pelanggan">Profile</a></li>
+								<?php if (isset($_SESSION['nama_pelanggan'])) { ?>
+									<li class="profile-menu"><a href="<?php echo base_url(); ?>Pelanggan">Profile</a></li>
+								<?php } ?>
 								<li><a href="<?php echo base_url(); ?>auth/registrasi">Register</a></li>
 							</ul>
 						</div>
@@ -162,3 +166,4 @@
 		</div>
 	</div>
 	<!-- END sidebar widget item -->
+	

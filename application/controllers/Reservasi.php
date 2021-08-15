@@ -13,11 +13,15 @@ class Reservasi extends CI_Controller {
 
 	public function index()
 	{
-		$a['title'] = 'Reservasi Mangsi';
-		$data['store'] = $this->Auth_model->outlet();
+		if ($_SESSION['nama_pelanggan'] != null) {
+			$a['title'] = 'Reservasi Mangsi';
+			$data['store'] = $this->Auth_model->outlet();
 
-		$this->load->view('template/header', $a);
-		$this->load->view('ReservasiSite', $data);
-        $this->load->view('template/footer');
+			$this->load->view('template/header', $a);
+			$this->load->view('ReservasiSite', $data);
+			$this->load->view('template/footer');
+		}else{
+			redirect('auth/login');
+		}
 	}
 }

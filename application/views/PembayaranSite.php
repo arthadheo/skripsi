@@ -42,6 +42,7 @@
                     <th>Harga</th>
                     <th>Kuantitas</th>
                     <th>Total harga</th>	
+                    <th>Poin digunakan</th>	
                 </tr>
             </thead>
             <tbody>
@@ -51,6 +52,7 @@
                     <td>25.000</td>
                     <td>2</td>
                     <td>50.000</td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>2</td>
@@ -58,6 +60,7 @@
                     <td>50.000</td>
                     <td>1</td>
                     <td>50.000</td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>3</td>
@@ -65,6 +68,7 @@
                     <td>15.000</td>
                     <td>2</td>
                     <td>30.000</td>
+                    <td>15</td>
                 </tr>
                 <tr>
                     <td></td>
@@ -72,6 +76,7 @@
                     <td></td>
                     <td>Jumlah Harga</td>
                     <td>130.000</td>
+                    <td>15</td>
                 </tr>
             </tbody>
         </table>
@@ -88,6 +93,7 @@
                 <input type="file" name="bukti_pembayaran" class="form-control" size="20" required>
                 <input type="submit" value="upload" />
             </div>
+
         
         <?php echo form_close(); ?>
 </section>

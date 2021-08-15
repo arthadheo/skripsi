@@ -455,10 +455,6 @@
 	position:relative;
 }
 
-.banner-section .image-column .image img{
-	/* max-width:inherit;
-	width:auto; */
-}
 
 .banner-section .owl-dots{
 	display: block;
@@ -7485,4 +7481,8 @@
 	opacity:0.5;
 	-webkit-filter: grayscale(100%);
 	filter: grayscale(100%);
+}
+
+[data-login="false"] .profile-menu{
+	display: none;
 }
