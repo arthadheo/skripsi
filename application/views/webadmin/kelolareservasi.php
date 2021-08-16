@@ -30,8 +30,7 @@
                                 <th>Nama</th>
                                 <th>Email</th>
                                 <th>Nomor Telepon</th>
-                                <th>Alamat Pelanggan</th>
-                                <th>Point Pelanggan</th>
+                                <th>Lihat detail</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -40,19 +39,17 @@
                                 <th>Nama</th>
                                 <th>Email</th>
                                 <th>Nomor Telepon</th>
-                                <th>Alamat Pelanggan</th>
-                                <th>Point Pelanggan</th>
+                                <th>Lihat detail</th>
                                 <th>Action</th>
                             </tr>
                         </tfoot>
                         
                         <tbody>
                             <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td>Dewo</td>
+                                <td>2121@gmail.com</td>
+                                <td>085745123656</td>
+                                <td><a href="<?php echo base_url(); ?>EmailReservasi">Lihat disini</a></td>
                                 <td>
                                     <button class="btn btn-primary" type="button">
                                         <i class="fas fa-sm"></i>Edit

@@ -3,6 +3,12 @@
 <head>
 	<title>Pembayaran</title>
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/bootstrap.css">
+    <link href="<?php echo base_url() ?>assets_admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+<title>Reservasi Email</title>
+
+<!-- Custom styles for this template-->
+<link href="<?php echo base_url() ?>assets_admin/css/sb-admin-2.min.css" rel="stylesheet">
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/bootstrap.js"></script>
 </head>
@@ -20,6 +26,7 @@
                     <th>Tempat</th>
                     <th>Tanggal</th>
                     <th>Jam</th>
+                    <th>Jumlah Orang</th>
                 </tr>
             </thead>
             <tbody>
@@ -31,6 +38,7 @@
                     <td>Indoor</td>
                     <td>03/08/2021</td>
                     <td>19.20</td>
+                    <td>5 dewasa, 2 anak</td>
                 </tr>
             </tbody>
         </table>
@@ -68,7 +76,7 @@
                     <td>15.000</td>
                     <td>2</td>
                     <td>30.000</td>
-                    <td>15</td>
+                    <td>15.000</td>
                 </tr>
                 <tr>
                     <td></td>
@@ -76,7 +84,7 @@
                     <td></td>
                     <td>Jumlah Harga</td>
                     <td>130.000</td>
-                    <td>15</td>
+                    <td>15.000</td>
                 </tr>
             </tbody>
         </table>

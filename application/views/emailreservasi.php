@@ -37,7 +37,7 @@
             </div>
             <div class="card-body">
                 <div class="table-responsive">
-                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <table class="table table-bordered" id="dataTableForm" width="100%" cellspacing="0">
                     <thead>
                         <tr>
                             <th>Nama</th>
@@ -47,6 +47,7 @@
                             <th>Tempat</th>
                             <th>Tanggal</th>
                             <th>Jam</th>
+                            <th>Jumlah Orang</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -58,6 +59,7 @@
                             <td>Indoor</td>
                             <td>03/08/2021</td>
                             <td>19.20</td>
+                            <td>5 dewasa, 2 anak</td>
                         </tr>
                     </tbody>
                     <tfoot>
@@ -69,11 +71,12 @@
                             <th>Tempat</th>
                             <th>Tanggal</th>
                             <th>Jam</th>
+                            <th>Jumlah Orang</th>
                         </tr>
                     </tfoot>
                     </table>
                     <br>
-                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <table class="table table-bordered" id="dataTableMenu" width="100%" cellspacing="0">
                     <thead>
                         <tr>
                             <th>No</th>
@@ -107,7 +110,7 @@
                             <td>15.000</td>
                             <td>2</td>
                             <td>30.000</td>
-                            <td>15</td>
+                            <td>15.000</td>
                         </tr>
                         <tr>
                             <td></td>
@@ -115,13 +118,13 @@
                             <td></td>
                             <td>Jumlah</td>
                             <td>130.000</td>
-                            <td>15</td>
+                            <td>15.000</td>
                         </tr>
                     </tbody>
                     </table>
                     <p style="font-weight: bolder;">Makanan disajikan ketika pelanggan sampai</p>
                     <br>
-                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <table class="table table-bordered" id="dataTablePoin" width="100%" cellspacing="0">
                     <thead>
                         <tr>
                             <th>Poin yang didapat</th>
@@ -132,8 +135,8 @@
                     <tbody>
                         <tr>
                             <td>130</td>
-                            <td>15</td>
-                            <td>215</td>
+                            <td>15.000</td>
+                            <td>5.130</td>
                         </tr>
                     </tbody>
                     <tfoot>

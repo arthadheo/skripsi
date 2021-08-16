@@ -51,6 +51,10 @@
 							</div>
 
 							<div class="form-group col-lg-6 col-md-6 col-sm-12">
+								<input type="text" name="Jumlah" placeholder="Jumlah Orang. (5 dewasa, 2 anak)" required>
+							</div>
+
+							<div class="form-group col-lg-6 col-md-6 col-sm-12">
 								<select type="text" name="outlet" onchange="tampilkan()" placeholder="Makanan disajikan" required> 
 								<?php foreach ($store as $str) { ?>
 								<option value="Mangsi Merdeka"><?php echo $str->nama_store; ?></option>

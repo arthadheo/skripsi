@@ -50,6 +50,7 @@
                         </div>
                         <div class="products">belum punya akun?<a href="<?php echo base_url(); ?>auth/registrasi">daftar disini</a></div>
                     </form>
+                    <a href="<?php echo base_url(); ?>WelcomeSite">Home</a>
                 </div>
             </div>
         </div>

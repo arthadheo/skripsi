@@ -102,6 +102,7 @@
                         </div>
                         <div class="products">sudah punya akun?<a href="<?php echo base_url(); ?>auth/login">login</a></div>
                     </form>
+                        <a href="<?php echo base_url(); ?>WelcomeSite">Home</a>
                     </div>
                 </div>
             </div>

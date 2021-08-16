@@ -17,7 +17,7 @@
     </head>
     
     <body>
-    <section class="page-title" style="background-image: url()">
+    <section class="page-title" style="background-image: url(../foodily/images/untuk-background.jpg)">
 		<!-- <div class="pattern-layer" style="background-image: url(images/background/pattern-7.png)"></div> -->
     	<div class="auto-container">
 			<div class="sec-title centered">
