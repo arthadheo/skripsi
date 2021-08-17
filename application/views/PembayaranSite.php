@@ -36,7 +36,7 @@
                     <td>2121@gmail.com</td>
                     <td>Mangsi Merdeka | Mix Your Own Grill</td>	
                     <td>Indoor</td>
-                    <td>03/08/2021</td>
+                    <td>20/08/2021</td>
                     <td>19.20</td>
                     <td>5 dewasa, 2 anak</td>
                 </tr>

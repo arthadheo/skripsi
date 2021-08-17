@@ -49,12 +49,11 @@ class KelolaOutlet extends CI_Controller {
         redirect('KelolaOutlet');
     }
 
-    // public function edit_store($id_store)
-    // {
-    //     $id_store = array('id_store', $id_store);
-    //     $data['store'] = $this->Auth_model->edit_store($id_store, 'store')->result();
-    //     $this->load->view('KelolaOutlet', $data);
-    // }
+    public function edit_store($id_store)
+    {
+        $this->Auth_model->edit_data_store($id_store);
+        redirect('KelolaOutlet');
+    }
 
     // public function update()
     // {

@@ -21,7 +21,7 @@
 						<h4 class="title">Isi Form Reservasi</h4>
 						<p>Poin hanya dapat ditukar dengan 1 pcs menu/1 transaksi reservasi</p>
 					</div>
-			<form method="POST" action="Pembayaran" id="form-menu">
+			<form method="POST" action="Pembayaran/timeout" id="form-menu">
 			<div class="row clearfix">
 			
 					<?php foreach ($menu as $mn) { ?>

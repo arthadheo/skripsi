@@ -48,4 +48,21 @@ class Pembayaran extends CI_Controller {
             }
  
         }
+
+    public function timeout(){
+        session_start();
+        $timeout = 1; // setting timeout dalam jam
+        $home = "../WelcomeSite"; // redirect halaman home
+
+        $timeout = $timeout * 15; //jam ke detik
+        if(isset($_SESSION['start_session'])) {
+            $elapsed_time = time()-$_SESSION['start_session'];
+            if ($elapsed_time >= $timeout) {
+                session_destroy();
+                echo "<script type='text/javascript'> alert('Sesi telah berakhir');window.location='$home'</script>";
+            }
+        }
+        $_SESSION['start_session']=time();
+
+    }
 }

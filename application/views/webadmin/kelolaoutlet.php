@@ -58,7 +58,54 @@
 <!-- modal tambah end -->
 
 <!-- modal edit -->
+<?php foreach($store as $str) { ?>
+<div class="modal fade" id="modalEdit<?php echo $str->id_store; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <?php echo form_open_multipart('KelolaOutlet/edit_store'); ?>
+            <input type="hidden" name="id_store" value="<?php echo $str->id_store; ?>"/>
+            <div class="modal-header text-center">
+                <h4 class="modal-title w-100 font-weight-bold">Edit Outlet</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form method="POST" action="<?php echo base_url('KelolaOutlet') ?>">
+            <div class="modal-body mx-3">
+                <!-- <div class="md-form mb-5">
+                <input type="hidden" name="id_store" class="form-control validate" value="<?php echo $store->id_store ?>">
+                </div> -->
 
+                <div class="md-form mb-5">
+                <input type="text" name="nama_store" class="form-control validate" value="<?php echo $str->nama_store; ?>">
+                <label data-error="wrong" data-success="right" for="form3"></label>
+                </div>
+
+                <div class="md-form mb-4">
+                <input type="text" name="lokasi_store" class="form-control validate" value="<?php echo $str->lokasi_store; ?>">
+                <label data-error="wrong" data-success="right" for="form2"></label>
+                </div>
+
+                <div class="md-form mb-4">
+                <input type="text" name="nomor_telepon_restoran" class="form-control validate" value="<?php echo $str->nomor_telepon_restoran; ?>">
+                <label data-error="wrong" data-success="right" for="form2"></label>
+                </div>
+
+                <div class="md-form mb-4">
+                <input type="text" name="kuota" class="form-control validate" value="<?php echo $str->kuota; ?>">
+                <label data-error="wrong" data-success="right" for="form2"></label>
+                </div>
+
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <button class="btn btn-primary">Submit <i class="ml-1"></i></button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+<?php } ?>
 
 <!-- modal edit end -->
 
@@ -100,9 +147,9 @@
                                 <td><?php echo $str->nomor_telepon_restoran; ?></td>
                                 <td><?php echo $str->kuota; ?></td>
                                 <td>
-                                    <button class="btn btn-primary" type="button"  class="btn btn-primary" type="button" data-toggle="modal" data-target="#modalEdit<?php echo $str->id_store; ?>" >
-                                        <i class="fas fa-sm"></i>Edit
-                                    </button>
+                                <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modalEdit<?php echo $str->id_store; ?>">
+                                    <i class="fas fa-sm"></i>Edit
+                                </button>
                                     
                                     <input type="hidden" value="<?php echo  $str->id_store; ?>" name="id_store">
                                     <a href="<?= base_url('KelolaOutlet/delete/'.$str->id_store) ?>" onclick="return confirm('Yakin ingin dihapus?')" class="btn btn-primary" type="button">

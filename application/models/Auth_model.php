@@ -47,10 +47,10 @@ class Auth_model extends CI_Model{
         $this->db->deletepelanggan('pelanggan', $data);
     }
     
-    // public function edit_store($id_store, $store)
-    // {
-    //     return $this->db->get_where($id_store, $store);
-    // }
+    public function edit_data_store($id_store, $store)
+    {
+        return $this->db->get_where($store, $id_store);
+    }
 
     // public function update_store($id_store,$data,$store)
     // {
